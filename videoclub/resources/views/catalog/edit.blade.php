@@ -16,6 +16,7 @@
 
             {{-- TODO: Abrir el formulario e indicar el método POST --}}
             <form action="#" method="POST">
+            {{ method_field('PUT') }}
             {{-- TODO: Protección contra CSRF --}}
             {{ csrf_field() }}
 
@@ -45,7 +46,7 @@
             <div class="form-group">
                <label for="synopsis">Resumen</label>
                <textarea name="synopsis" id="synopsis" class="form-control" rows="3">
-               	value="{{$pelicula->synopsis}}"
+               	{{$pelicula->synopsis}}
                </textarea>
             </div>
 
